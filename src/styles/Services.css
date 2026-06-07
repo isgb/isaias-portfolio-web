@@ -1,0 +1,193 @@
+.services-orbit-system {
+  position: relative;
+  width: min(760px, 100%);
+  aspect-ratio: 1;
+  margin: 64px auto 0;
+}
+
+.services-sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: grid;
+  place-items: center;
+}
+
+.services-sun-glow {
+  position: absolute;
+  inset: -35%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.4), transparent 70%);
+  filter: blur(22px);
+  animation: services-sun-pulse 6s ease-in-out infinite;
+}
+
+.services-sun-avatar {
+  position: relative;
+  width: clamp(92px, 14vw, 136px);
+  height: clamp(92px, 14vw, 136px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.12), 0 24px 60px rgba(99, 102, 241, 0.4);
+}
+
+.services-orbit-list {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--orbit-radius) * 2);
+  height: calc(var(--orbit-radius) * 2);
+  margin: calc(var(--orbit-radius) * -1) 0 0 calc(var(--orbit-radius) * -1);
+  border: 1px dashed rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  /* Las seis órbitas comparten el mismo radio, así que sus cajas se
+     superponen por completo. Sin esto, la última en pintarse capturaría
+     el hover de toda esa zona compartida (incluida su parte transparente)
+     y le robaría el resaltado a la tarjeta que el usuario realmente señala. */
+  pointer-events: none;
+  animation: services-orbit-spin var(--orbit-duration) linear infinite;
+  animation-delay: var(--orbit-delay);
+  will-change: transform;
+}
+
+.services-planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  animation: services-planet-spin var(--orbit-duration) linear infinite;
+  animation-delay: var(--orbit-delay);
+  will-change: transform;
+}
+
+/* Pausa las seis órbitas a la vez (no solo la que tiene el cursor encima):
+   como cada tarjeta vive en su propio <li> hermano, pausar solo una
+   rompería la separación constante de 60° entre todas y, con el tiempo,
+   terminarían solapándose. Al depender de :hover en el contenedor,
+   todas se detienen y reanudan exactamente en el mismo instante. */
+.services-orbit-system:hover .services-orbit,
+.services-orbit-system:hover .services-planet {
+  animation-play-state: paused;
+}
+
+.services-planet-card {
+  width: clamp(128px, 14vw, 162px);
+  padding: 16px 14px;
+  text-align: center;
+  cursor: default;
+  pointer-events: auto;
+}
+
+.services-planet-card:hover {
+  border-color: rgba(165, 180, 252, 0.5);
+}
+
+.services-planet-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  font-size: 18px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 10px 22px rgba(99, 102, 241, 0.35);
+}
+
+.services-planet-card h3 {
+  font-size: 13.5px;
+  margin-bottom: 6px;
+}
+
+.services-planet-card p {
+  color: var(--text-muted);
+  font-size: 11.5px;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@keyframes services-orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes services-planet-spin {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(-360deg); }
+}
+
+@keyframes services-sun-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.92); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@media (max-width: 900px) {
+  .services-orbit-system {
+    width: min(520px, 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-orbit-system {
+    width: 100%;
+    aspect-ratio: auto;
+    margin-top: 40px;
+  }
+
+  .services-sun {
+    position: static;
+    transform: none;
+    margin: 0 auto 36px;
+  }
+
+  .services-orbit-list {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 18px;
+  }
+
+  .services-orbit {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border: none;
+    animation: none;
+  }
+
+  .services-planet {
+    position: static;
+    transform: none;
+    animation: none;
+  }
+
+  .services-planet-card {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-orbit,
+  .services-planet,
+  .services-sun-glow {
+    animation: none;
+  }
+}
