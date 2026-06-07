@@ -9,6 +9,7 @@ import { links } from "../../constants/constants";
  * @returns {JSX.Element} El componente de barra de navegación.
  */
 function Navbar() {
+  
   // Estado para indicar si la página ha sido desplazada hacia abajo, usado para cambiar el estilo de la barra de navegación
   const [scrolled, setScrolled] = useState(false);
   // Estado para controlar si el menú móvil está abierto o cerrado

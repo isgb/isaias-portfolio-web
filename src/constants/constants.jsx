@@ -130,3 +130,6 @@ export const technologies = [
   "Express",
   "Next.js",
 ];
+
+// Umbral mínimo de desplazamiento para considerar un gesto como swipe
+export const SWIPE_THRESHOLD = 45;

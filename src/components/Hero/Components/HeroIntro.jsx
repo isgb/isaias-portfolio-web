@@ -1,18 +1,19 @@
 import styles from '../../../styles/Hero.module.css';
 
 /**
- * Componente de introducción del héroe que muestra un saludo y el nombre.
+ * Componente de introducción del héroe que muestra una etiqueta y el nombre partido
+ * en dos líneas, a modo de firma tipográfica superpuesta a la foto de perfil.
  * @returns {JSX.Element} El componente de introducción del héroe.
  */
 function HeroIntro() {
   return (
-    <>
-      <p className={styles.greeting}>Hola, soy</p>
-      <h1>
-        <span className={styles.name}>Isaías</span>{' '}
-        <span className={styles.role}>Full Stack Developer</span>
+    <div className={styles.signature}>
+      <span className={styles.tag}>Isaías · Dev</span>
+      <h1 className={styles.splitName}>
+        <span>Isa</span>
+        <span>ías</span>
       </h1>
-    </>
+    </div>
   );
 }
 

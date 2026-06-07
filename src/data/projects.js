@@ -1,3 +1,7 @@
+// Archivo de datos que contiene la lista de proyectos para el portafolio.
+// Cada proyecto tiene un título, descripción, etiquetas de tecnologías usadas,
+// y enlaces para demo y código fuente. Esta información se centraliza aquí
+// para facilitar su mantenimiento y actualización.
 export const projects = [
   {
     title: 'Sistema de Gestión CRUD',

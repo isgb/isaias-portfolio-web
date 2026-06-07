@@ -4,3 +4,8 @@ export function getCurrentYear() {
   const year = new Date().getFullYear();
   return year;
 }
+
+// Total de proyectos en el carrusel, usado para calcular índices de navegación
+export function getTotalProjects(projects) {
+  return projects.length;
+}
