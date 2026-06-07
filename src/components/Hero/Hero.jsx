@@ -2,6 +2,8 @@ import styles from "../../styles/Hero.module.css";
 import perfilPhoto from "../../assets/images/perfil.jpg";
 import { socials } from "../../constants/constants";
 import HeroSocials from "./Components/HeroSocials";
+import HeroBigWord from "./Components/HeroBigWord";
+import HeroStack from "./Components/HeroStack";
 import HeroPhoto from "./Components/HeroPhoto";
 import HeroIntro from "./Components/HeroIntro";
 import HeroDescription from "./Components/HeroDecription";
@@ -19,16 +21,10 @@ function Hero() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.poster}>
           {/* Palabra de fondo a gran escala, estilo cartel editorial */}
-          <span className={styles.bigWord} aria-hidden="true">
-            Full Stack
-          </span>
+          <HeroBigWord text="Full Stack" />
 
           {/* Lista vertical de especialidades sobre el borde izquierdo */}
-          <ul className={styles.stack}>
-            <li>Front</li>
-            <li>Back</li>
-            <li>Full</li>
-          </ul>
+          <HeroStack items={["Front", "Back", "Full"]} />
 
           {/* Componente de foto del héroe que muestra la foto de perfil con un diseño de tarjeta de vidrio. */}
           <HeroPhoto photo={perfilPhoto} alt="Isaías, Full Stack Developer" />

@@ -1,6 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../../styles/Navbar.module.css";
 import { links } from "../../constants/constants";
+import { useScrolled } from "../../hooks/useScrolled";
+import NavbarLogo from "./Components/NavbarLogo";
+import NavbarToggle from "./Components/NavbarToggle";
+import NavbarLinks from "./Components/NavbarLinks";
 
 /**
  * Componente de barra de navegación que se muestra en la parte superior de la página.
@@ -10,45 +14,25 @@ import { links } from "../../constants/constants";
  */
 function Navbar() {
   
-  // Estado para indicar si la página ha sido desplazada hacia abajo, usado para cambiar el estilo de la barra de navegación
-  const [scrolled, setScrolled] = useState(false);
+  // Indica si la página ha sido desplazada hacia abajo, usado para cambiar el estilo de la barra de navegación
+  const scrolled = useScrolled(20);
+  
   // Estado para controlar si el menú móvil está abierto o cerrado
   const [open, setOpen] = useState(false);
-
-  // Efecto para agregar un listener de scroll que actualiza el estado 'scrolled' según la posición de desplazamiento
-  useEffect(() => {
-    // Función para manejar el evento de scroll, actualiza 'scrolled' a true si se ha desplazado más de 20px, o a false si no
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    // Agrega el listener de scroll al montar el componente y lo limpia al desmontar para evitar fugas de memoria
-    window.addEventListener("scroll", onScroll);
-    // Retorna una función de limpieza que elimina el listener de scroll cuando el componente se desmonta
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.inner}`}>
-        <a href="#hero" className={styles.logo}>
-          Isaías<span>.dev</span>
-        </a>
 
-        <nav className={`${styles.links} ${open ? styles.open : ""}`}>
-          {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        {/* Enlace de logo que lleva al inicio de la página, con un diseño que resalta el nombre del desarrollador y su especialización. */}
+        <NavbarLogo />
 
-        <button
-          className={styles.toggle}
-          aria-label="Abrir menú"
-          onClick={() => setOpen((prev) => !prev)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        {/* Navegación principal con enlaces a las secciones del sitio, que se muestra de forma horizontal en pantallas grandes y como un menú desplegable en dispositivos móviles. */}
+        <NavbarLinks links={links} open={open} onLinkClick={() => setOpen(false)} />
+
+        {/* Botón de menú para dispositivos móviles, que alterna el estado 'open' para mostrar u ocultar la navegación. */}
+        <NavbarToggle open={open} onToggle={() => setOpen((prev) => !prev)} />
+        
       </div>
     </header>
   );
