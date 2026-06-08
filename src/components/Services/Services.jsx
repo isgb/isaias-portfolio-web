@@ -1,11 +1,13 @@
 import "../../styles/Services.css";
-import avatarImagen from "../../assets/images/avatar.jpeg";
+import avatarImagen from "../../assets/images/avatar.png";
 import {
   serviciosInfo,
   START_ANGLES,
   ORBIT_RADIUS,
   ORBIT_DURATION,
 } from "../../constants/constants";
+import ServicesOrbitSystem from "./Components/Services/ServicesOrbitSystem";
+import ServicesSun from "./Components/Services/ServicesSun";
 import ServicesOrbitList from "./Components/Services/ServicesOrbitList";
 
 /**
@@ -19,25 +21,24 @@ function Services() {
     <section id="servicios" className="section">
       <div className="container">
         <h2 className="section-title">Servicios</h2>
+
         <p className="section-subtitle">Lo que puedo ofrecer a tu proyecto</p>
 
-        <div className="services-orbit-system">
-          <div className="services-sun" aria-hidden="true">
-            <span className="services-sun-glow" />
-            <img src={avatarImagen} alt="" className="services-sun-avatar" />
-          </div>
+        {/* Sistema planetario de servicios: cada hijo recibe sus props directamente,
+          ServicesOrbitSystem solo aporta el contenedor de layout (sin prop drilling). */}
+        <ServicesOrbitSystem>
+          {/* El "sol" central del sistema planetario, que es el avatar del desarrollador. */}
+          <ServicesSun avatar={avatarImagen} />
 
-          {/* Componente que renderiza las tarjetas de servicio orbitando alrededor 
-            del avatar central, utilizando los datos de serviciosInfo 
-            y las constantes de configuración para calcular las posiciones y animaciones de cada tarjeta.*/}
+          {/* Tarjetas de servicio orbitando alrededor del avatar central. */}
           <ServicesOrbitList
             services={serviciosInfo}
             startAngles={START_ANGLES}
             orbitRadius={ORBIT_RADIUS}
             orbitDuration={ORBIT_DURATION}
           />
-        </div>
-        
+        </ServicesOrbitSystem>
+
       </div>
     </section>
   );

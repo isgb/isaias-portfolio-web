@@ -1,3 +1,16 @@
+import {
+  SiReact,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiPhp,
+  SiMysql,
+  SiMongodb,
+  SiExpress,
+  SiNextdotjs,
+  SiBootstrap,
+} from "react-icons/si";
+
 // Nos permite centralizar la información de las redes sociales,
 // facilitando su mantenimiento y actualización en un solo lugar.
 // Esto mejora la organización del código y evita la repetición de datos en diferentes componentes.
@@ -120,15 +133,16 @@ export const ORBIT_DURATION = 30; // segundos para dar una vuelta completa, a es
 export const START_ANGLES = [0, 60, 120, 180, 240, 300]; // Ángulos de inicio para cada tarjeta, en grados, separados 60° para repartirlas uniformemente en el círculo (360° / 6 tarjetas = 60° entre cada una).
 
 export const technologies = [
-  "React",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "PHP",
-  "MySQL",
-  "MongoDB",
-  "Express",
-  "Next.js",
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
+  { name: "CSS3", icon: SiCss, color: "#1572B6" },
+  { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+  { name: "PHP", icon: SiPhp, color: "#777BB4" },
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "Express", icon: SiExpress, color: "#E8E8E8" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#E8E8E8" },
 ];
 
 // Umbral mínimo de desplazamiento para considerar un gesto como swipe

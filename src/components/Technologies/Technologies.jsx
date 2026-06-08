@@ -15,9 +15,10 @@ function Technologies() {
         <p className="section-subtitle">Herramientas con las que trabajo a diario</p>
 
         <div className={styles.grid}>
-          {technologies.map((tech) => (
-            <div key={tech} className={`glass-card ${styles.item}`}>
-              <span>{tech}</span>
+          {technologies.map(({ name, icon: Icon, color }) => (
+            <div key={name} className={`glass-card ${styles.item}`}>
+              <Icon className={styles.icon} style={{ color }} aria-hidden="true" />
+              <span>{name}</span>
             </div>
           ))}
         </div>

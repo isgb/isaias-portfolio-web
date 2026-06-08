@@ -1,31 +1,37 @@
 {
-  "hash": "25163827",
+  "hash": "40eed360",
   "configHash": "416f69fc",
-  "lockfileHash": "edcb0806",
-  "browserHash": "c94dcf16",
+  "lockfileHash": "4536e717",
+  "browserHash": "feffcfaa",
   "optimized": {
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "80305e40",
+      "fileHash": "724307ef",
       "needsInterop": true
+    },
+    "react-icons/si": {
+      "src": "../../node_modules/react-icons/si/index.mjs",
+      "file": "react-icons_si.js",
+      "fileHash": "6156e6c2",
+      "needsInterop": false
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "f698dcff",
+      "fileHash": "0c11f0b1",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "eb5d9223",
+      "fileHash": "59192cb3",
       "needsInterop": true
     }
   },
   "chunks": {
-    "react-DiA8Tu0S": {
-      "file": "react-DiA8Tu0S.js",
+    "react-Ea1HnpA1": {
+      "file": "react-Ea1HnpA1.js",
       "isDynamicEntry": false
     }
   }
