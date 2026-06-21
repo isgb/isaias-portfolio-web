@@ -32,43 +32,6 @@ export const links = [
   { href: "#contacto", label: "Contacto" },
 ];
 
-// Nos permite centralizar la información de la experiencia y educación,
-// facilitando su mantenimiento y actualización en un solo lugar.
-export const items = [
-  {
-    type: "Experiencia",
-    title: "Desarrollador Full Stack",
-    place: "Freelance",
-    period: "2023 — Presente",
-    description:
-      "Desarrollo de aplicaciones web a medida con React, Node.js y MySQL para clientes de diferentes sectores.",
-  },
-  {
-    type: "Experiencia",
-    title: "Desarrollador Frontend",
-    place: "Proyectos personales y open source",
-    period: "2022 — 2023",
-    description:
-      "Construcción de interfaces interactivas y mantenimiento de proyectos en React y JavaScript.",
-  },
-  {
-    type: "Educación",
-    title: "Desarrollo de Software",
-    place: "Formación técnica",
-    period: "2021 — 2023",
-    description:
-      "Fundamentos de programación, bases de datos, estructuras de datos y desarrollo web full stack.",
-  },
-  {
-    type: "Educación",
-    title: "Cursos y certificaciones",
-    place: "Plataformas online",
-    period: "2021 — Presente",
-    description:
-      "Formación continua en React, Next.js, Node.js, bases de datos y arquitectura de software.",
-  },
-];
-
 // Nos permite centralizar la información de contacto,
 // facilitando su mantenimiento y actualización en un solo lugar.
 export const info = [
