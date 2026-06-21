@@ -15,10 +15,10 @@ function HeroPhoto({ photo, alt }) {
       <div className={styles.photoFrame}>
         <img src={photo} alt={alt} className={styles.avatar} />
       </div>
-      <div className={styles.badge}>
-        <strong>+3</strong>
+      {/* <div className={styles.badge}>
+        <strong>+6</strong>
         <span>años de experiencia</span>
-      </div>
+      </div> */}
     </div>
   );
 }

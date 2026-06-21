@@ -8,10 +8,13 @@ import styles from "../../../styles/Hero.module.css";
  */
 function HeroDescription() {
   return (
-    <p className={styles.description}>
-      Construyo aplicaciones web y móviles modernas, escalables y centradas en
-      la experiencia del usuario, desde la interfaz hasta la base de datos.
-    </p>
+    <div className={styles.descriptionBlock}>
+      <p className={styles.experience}>+6 años de experiencia</p>
+      <p className={styles.description}>
+        Construyo aplicaciones web y móviles modernas, escalables y centradas en
+        la experiencia del usuario, desde la interfaz hasta la base de datos.
+      </p>
+    </div>
   );
 }
 

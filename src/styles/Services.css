@@ -1,6 +1,6 @@
 .services-orbit-system {
   position: relative;
-  width: min(760px, 100%);
+  width: min(900px, 100%);
   aspect-ratio: 1;
   margin: 64px auto 0;
 }
@@ -19,20 +19,20 @@
   position: absolute;
   inset: -35%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.4), transparent 70%);
+  background: radial-gradient(circle, rgba(35, 83, 71, 0.45), transparent 70%);
   filter: blur(22px);
   animation: services-sun-pulse 6s ease-in-out infinite;
 }
 
 .services-sun-avatar {
   position: relative;
-  width: clamp(92px, 14vw, 136px);
-  height: clamp(92px, 14vw, 136px);
+  width: clamp(104px, 16vw, 152px);
+  height: clamp(104px, 16vw, 152px);
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
   border: 3px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.12), 0 24px 60px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 0 8px rgba(35, 83, 71, 0.15), 0 24px 60px rgba(35, 83, 71, 0.45);
 }
 
 .services-orbit-list {
@@ -92,7 +92,7 @@
 }
 
 .services-planet-card:hover {
-  border-color: rgba(165, 180, 252, 0.5);
+  border-color: rgba(142, 182, 155, 0.5);
 }
 
 .services-planet-icon {
@@ -105,7 +105,7 @@
   border-radius: 12px;
   font-size: 18px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
-  box-shadow: 0 10px 22px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 10px 22px rgba(35, 83, 71, 0.4);
 }
 
 .services-planet-card h3 {
@@ -140,7 +140,7 @@
 
 @media (max-width: 900px) {
   .services-orbit-system {
-    width: min(520px, 100%);
+    width: min(640px, 100%);
   }
 }
 

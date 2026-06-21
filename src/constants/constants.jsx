@@ -15,9 +15,9 @@ import {
 // facilitando su mantenimiento y actualización en un solo lugar.
 // Esto mejora la organización del código y evita la repetición de datos en diferentes componentes.
 export const socials = [
-  { href: "https://github.com/", label: "GitHub", icon: "GH" },
-  { href: "https://linkedin.com/", label: "LinkedIn", icon: "in" },
-  { href: "https://twitter.com/", label: "Twitter", icon: "X" },
+  { href: "https://github.com/isgb", label: "GitHub", icon: "GH" },
+  { href: "https://www.linkedin.com/in/isa%C3%ADas-salvador-gaona-bracamontes/", label: "LinkedIn", icon: "in" },
+  { href: "mailto:isgb_codigo@hotmail.com", label: "Email", icon: "✉" },
 ];
 
 //Nos permite centralizar la información de los enlaces de navegación,
@@ -37,15 +37,15 @@ export const links = [
 export const info = [
   {
     label: "Email",
-    value: "isaias@example.com",
-    href: "mailto:isaias@example.com",
+    value: "isgb_codigo@hotmail.com",
+    href: "mailto:isgb_codigo@hotmail.com",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/isaias",
-    href: "https://linkedin.com/",
+    value: "linkedin.com/in/isaías-salvador",
+    href: "https://www.linkedin.com/in/isa%C3%ADas-salvador-gaona-bracamontes/",
   },
-  { label: "GitHub", value: "github.com/isaias", href: "https://github.com/" },
+  { label: "GitHub", value: "github.com/isgb", href: "https://github.com/isgb" },
 ];
 
 // Nos permite centralizar la información de los servicios ofrecidos,
@@ -89,7 +89,7 @@ export const serviciosInfo = [
 ];
 
 // Nos permite centralizar la información de las órbitas y su comportamiento,
-export const ORBIT_RADIUS = "clamp(224px, 30vw, 300px)"; // Radio de la órbita, usando clamp para adaptarse a diferentes tamaños de pantalla. El mínimo es 224px para asegurar que las tarjetas no se superpongan al avatar en pantallas pequeñas, y el máximo es 300px para evitar que se alejen demasiado en pantallas grandes. En pantallas medianas, el radio se ajusta dinámicamente al 30% del ancho de la ventana, manteniendo un diseño equilibrado y responsivo.
+export const ORBIT_RADIUS = "clamp(270px, 35vw, 370px)"; // Radio de la órbita, usando clamp para adaptarse a diferentes tamaños de pantalla. El mínimo es 224px para asegurar que las tarjetas no se superpongan al avatar en pantallas pequeñas, y el máximo es 300px para evitar que se alejen demasiado en pantallas grandes. En pantallas medianas, el radio se ajusta dinámicamente al 30% del ancho de la ventana, manteniendo un diseño equilibrado y responsivo.
 // Esto mejora la organización del código y evita la repetición de datos en diferentes componentes, como el componente de Servicios.
 export const ORBIT_DURATION = 30; // segundos para dar una vuelta completa, a esta velocidad las tarjetas se mueven lo suficientemente rápido como para no aburrir, pero lo bastante lento como para poder leer su contenido sin dificultad.
 // Nos permite centralizar la información de los ángulos de inicio de las órbitas,

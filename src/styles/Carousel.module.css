@@ -50,12 +50,12 @@
 
 .cardActive {
   cursor: default;
-  border-color: rgba(165, 180, 252, 0.45);
-  box-shadow: 0 24px 60px rgba(99, 102, 241, 0.35);
+  border-color: rgba(142, 182, 155, 0.45);
+  box-shadow: 0 24px 60px rgba(35, 83, 71, 0.4);
 }
 
 .card:hover:not(.cardActive) {
-  border-color: rgba(165, 180, 252, 0.3);
+  border-color: rgba(142, 182, 155, 0.3);
 }
 
 .activeTag {
@@ -70,7 +70,7 @@
   border-radius: 999px;
   background: linear-gradient(120deg, var(--primary), var(--secondary));
   color: #fff;
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 20px rgba(35, 83, 71, 0.45);
 }
 
 .thumb {
@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.35), rgba(168, 85, 247, 0.25));
+  background: linear-gradient(135deg, rgba(35, 83, 71, 0.4), rgba(22, 56, 50, 0.3));
   flex-shrink: 0;
 }
 
