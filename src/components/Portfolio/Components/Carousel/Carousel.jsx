@@ -1,76 +1,73 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+  Keyboard,
+} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import styles from "../../../../styles/Carousel.module.css";
 import { projects } from "../../../../data/projects";
-import CarouselTrack from "./CarouselTrack";
-import CarouselDots from "./CarouselDots";
-import CarouselNavButton from "./CarouselNavButton";
-import { useCarousel } from "../../../../hooks/useCarousel";
 
-/**
- * Componente de carrusel para mostrar proyectos destacados en la sección de portafolio.
- * Permite navegar entre proyectos usando botones, teclado y gestos táctiles.
- * @returns {JSX.Element} El componente de carrusel.
- */
 function Carousel() {
-  // Estado y manejadores de navegación del carrusel encapsulados en un hook personalizado
-  const {
-    activeIndex,
-    total,
-    active,
-    goTo,
-    goPrev,
-    goNext,
-    handleKeyDown,
-    handleTouchStart,
-    handleTouchEnd,
-  } = useCarousel(projects);
-
   return (
     <div className={styles.carousel}>
-      <div
-        className={styles.viewport}
-        role="region"
-        aria-roledescription="carrusel"
-        aria-label="Proyectos destacados"
-        tabIndex={0}
-        onKeyDown={handleKeyDown}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
+      <Swiper
+        effect="coverflow"
+        centeredSlides
+        slidesPerView="auto"
+        loop
+        grabCursor
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 80,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        navigation
+        pagination={{ clickable: true }}
+        keyboard={{ enabled: true }}
+        modules={[EffectCoverflow, Navigation, Pagination, Keyboard]}
+        className={styles.swiper}
       >
-        {/* Componente de botón de navegación del carrusel para ir al proyecto anterior, 
-          con un icono de flecha y una etiqueta accesible. */}
-        <CarouselNavButton
-          direction="prev"
-          onClick={goPrev}
-          label="Proyecto anterior"
-          icon="‹"
-        />
-
-          {/* Componente de pista del carrusel para mostrar los proyectos. */}
-          <CarouselTrack
-            projects={projects}
-            activeIndex={activeIndex}
-            total={total}
-            goTo={goTo}
-          />
-
-        {/* Componente de botón de navegación del carrusel para ir al 
-          siguiente proyecto, con un icono de flecha y una etiqueta accesible. */}
-        <CarouselNavButton
-          direction="next"
-          onClick={goNext}
-          label="Siguiente proyecto"
-          icon="›"
-        />
-      </div>
-
-      {/* Componente de puntos de navegación del carrusel, 
-         que muestra un punto por cada proyecto y permite navegar 
-         a un proyecto específico al hacer clic en su punto correspondiente. */}
-      <CarouselDots projects={projects} activeIndex={activeIndex} goTo={goTo} />
-
-      <p className={styles.srStatus} aria-live="polite">
-        Mostrando proyecto {activeIndex + 1} de {total}: {active.title}
-      </p>
+        {projects.map((project) => (
+          <SwiperSlide key={project.title} className={styles.slide}>
+            {({ isActive }) => (
+              <article
+                className={`${styles.card} ${isActive ? styles.cardActive : ""}`}
+              >
+                {isActive && (
+                  <span className={styles.activeTag}>Proyecto destacado</span>
+                )}
+                <div className={styles.thumb} aria-hidden="true">
+                  <span>{project.title.charAt(0)}</span>
+                </div>
+                <div className={styles.body}>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className={styles.tags}>
+                    {project.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                  <div className={styles.cardLinks}>
+                    <a href={project.demo} target="_blank" rel="noreferrer">
+                      Ver Demo →
+                    </a>
+                    <a href={project.code} target="_blank" rel="noreferrer">
+                      Código →
+                    </a>
+                  </div>
+                </div>
+              </article>
+            )}
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
