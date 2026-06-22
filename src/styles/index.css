@@ -74,10 +74,25 @@ button {
 }
 
 .section-subtitle {
-  text-align: center;
   color: var(--text-muted);
   margin-bottom: 56px;
   font-size: 16px;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.section-subtitle::before,
+.section-subtitle::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.35;
+  flex-shrink: 0;
 }
 
 .glass-card {
