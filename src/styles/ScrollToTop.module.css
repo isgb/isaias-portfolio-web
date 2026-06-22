@@ -9,11 +9,11 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(10px);
-  color: var(--text-muted);
+  background: var(--primary);
+  border: 1px solid var(--accent);
+  color: var(--text-main);
   font-size: 18px;
+  box-shadow: 0 4px 16px rgba(5, 31, 32, 0.5);
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
@@ -28,8 +28,10 @@
 }
 
 .button:hover {
-  color: var(--accent);
+  background: var(--accent);
   border-color: var(--accent);
+  color: var(--bg-deep);
+  box-shadow: 0 6px 20px rgba(142, 182, 155, 0.3);
 }
 
 @media (max-width: 480px) {
