@@ -1,88 +1,84 @@
-# 🚀 Isaías Gaona — Full Stack Developer Portfolio
+# Isaias Gaona — Full Stack Developer Portfolio
 
-Portafolio profesional desarrollado para presentar mi experiencia, habilidades técnicas y proyectos como desarrollador Full Stack.
+Portafolio profesional desarrollado para presentar mi experiencia, habilidades tecnicas y proyectos como desarrollador Full Stack.
 
-Diseñado con un enfoque moderno, accesible y responsive, este sitio funciona como una carta de presentación digital donde muestro mi trayectoria profesional, tecnologías principales y proyectos destacados.
+Sitio de una sola pagina (SPA) con React 19 y Vite, diseño dark con paleta teal/sage, responsive y accesible.
 
-## 👨‍💻 About Me
+## Tech Stack
 
-Soy desarrollador Full Stack con más de 6 años de experiencia construyendo aplicaciones web escalables y mantenibles.
+| Tecnologia   | Uso                          |
+| ------------ | ---------------------------- |
+| React 19     | UI / componentes             |
+| Vite 8       | Build tool / dev server      |
+| CSS Modules  | Estilos por componente       |
+| Swiper       | Carrusel de proyectos        |
+| react-icons  | Iconos de tecnologias        |
+| ESLint       | Calidad de codigo            |
 
-Mi experiencia incluye el desarrollo de interfaces modernas con React, la implementación de APIs y lógica de negocio en PHP y JavaScript, así como el diseño y administración de bases de datos relacionales y NoSQL.
-
-### Principales tecnologías
-
-* React
-* JavaScript (ES6+)
-* PHP
-* MySQL
-* MongoDB
-* Express.js
-* Next.js
-* HTML5
-* CSS3
-
----
-
-## ✨ Features
-
-* Diseño moderno con estilo Glassmorphism
-* Totalmente responsive
-* Navegación fluida de una sola página (SPA)
-* Sección de experiencia profesional
-* Showcase de proyectos destacados
-* Catálogo de tecnologías
-* Formulario de contacto
-* Optimización para rendimiento y accesibilidad
-* Animaciones respetando `prefers-reduced-motion`
-
----
-
-## 🛠️ Tech Stack
-
-| Tecnología  | Uso            |
-| ----------- | -------------- |
-| React 19    | UI Development |
-| Vite        | Build Tool     |
-| CSS Modules | Styling        |
-| ESLint      | Code Quality   |
-
----
-
-## 📂 Project Structure
+## Estructura del proyecto
 
 ```text
 src/
+├── assets/images/        # Imagenes (avatar, perfil)
 ├── components/
+│   ├── Hero/             # Seccion hero con foto, nombre, descripcion
+│   ├── Services/         # Sistema planetario de servicios
+│   ├── Experience/       # Timeline de experiencia + educacion
+│   ├── Technologies/     # Grid de tecnologias con iconos
+│   ├── Portfolio/        # Carrusel Swiper de proyectos
+│   ├── Contact/          # Formulario de contacto
+│   ├── Navbar/           # Navegacion con scroll detection
+│   └── Footer/           # Pie de pagina
+├── constants/constants.jsx  # Datos centralizados (socials, links, servicios, tecnologias)
 ├── data/
-├── assets/
-├── styles/
+│   ├── experienceData.js    # Experiencia profesional y educacion (datos reales del CV)
+│   └── projects.js          # Proyectos del portafolio
+├── hooks/
+│   ├── useContactForm.js    # Logica del formulario de contacto
+│   └── useScrolled.js       # Deteccion de scroll para navbar
+├── styles/                  # CSS Modules + Services.css
 ├── App.jsx
 └── main.jsx
 ```
 
-La aplicación sigue una arquitectura basada en componentes reutilizables, manteniendo una clara separación entre presentación, contenido y estilos.
+## Paleta de colores
 
----
+| Color     | Hex       | Uso                        |
+| --------- | --------- | -------------------------- |
+| Deep teal | `#051F20` | Fondo principal            |
+| Dark teal | `#0B2B26` | Fondo secundario / cards   |
+| Mid teal  | `#163832` | Gradientes secundarios     |
+| Teal      | `#235347` | Color primario / botones   |
+| Sage      | `#8EB69B` | Acentos / texto secundario |
+| Mint      | `#DAF1DE` | Texto principal            |
 
-## 🚀 Getting Started
+## Getting Started
 
-### Prerequisites
+```bash
+# Instalar dependencias
+npm install
 
-* Node.js 20+
-* npm o yarn
+# Iniciar servidor de desarrollo
+npm run dev
 
+# Build de produccion
+npm run build
 
-## 📬 Contact
+# Lint
+npx eslint src/
+```
 
-Si deseas colaborar, discutir una oportunidad laboral o simplemente conectar:
+### Requisitos
 
-* LinkedIn: https://linkedin.com/in/tu-perfil
-* GitHub: https://github.com/isgb
-* Email: isgb_codigo@hotmail.com
+- Node.js 20+
+- npm
 
----
+## Contacto
 
-## 📄 License
+- LinkedIn: [linkedin.com/in/isaias-salvador-gaona-bracamontes](https://www.linkedin.com/in/isa%C3%ADas-salvador-gaona-bracamontes/)
+- GitHub: [github.com/isgb](https://github.com/isgb)
+- Email: isgb_codigo@hotmail.com
 
-Este proyecto se distribuye bajo la licencia MIT.
+## Licencia
+
+MIT
