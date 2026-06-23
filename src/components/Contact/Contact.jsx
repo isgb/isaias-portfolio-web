@@ -14,22 +14,19 @@ import { useContactForm } from "../../hooks/useContactForm";
  * @returns {JSX.Element} El componente de contacto.
  */
 function Contact() {
-
-  // Utiliza el hook personalizado useContactForm para manejar el estado del formulario, 
+  // Utiliza el hook personalizado useContactForm para manejar el estado del formulario,
   // el envío y los cambios en los campos del formulario.
   const { form, sent, handleChange, handleSubmit } = useContactForm();
 
   return (
     <section id="contacto" className="section">
       <div className="container">
-        
         <h2 className="section-title">Contacto</h2>
         <p className="section-subtitle">
           ¿Tienes un proyecto en mente? Hablemos
         </p>
 
         <div className={styles.layout}>
-          
           {/* Componente para mostrar la información de contacto en la sección de contacto. */}
           <InformacionContacto info={info} />
 
@@ -40,7 +37,6 @@ function Contact() {
             handleSubmit={handleSubmit}
             sent={sent}
           />
-
         </div>
       </div>
     </section>
