@@ -289,9 +289,15 @@
 }
 
 @media (max-width: 920px) {
+  .hero {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
   .content {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 32px;
   }
 
   .identity {
@@ -332,7 +338,7 @@
   }
 
   .photoWrapper {
-    max-width: 320px;
+    max-width: 240px;
     order: -1;
   }
 
@@ -342,16 +348,34 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 32px;
+  }
+
+  .content {
+    gap: 24px;
+  }
+
   .photoWrapper {
-    max-width: 260px;
+    max-width: 200px;
   }
 
   .stack {
     flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .signature {
+    margin-bottom: 20px;
   }
 
   .splitName {
-    font-size: clamp(40px, 16vw, 56px);
+    font-size: clamp(36px, 14vw, 52px);
+  }
+
+  .description {
+    font-size: 16px;
   }
 
   .badge {
