@@ -16,7 +16,11 @@ import {
 // Esto mejora la organización del código y evita la repetición de datos en diferentes componentes.
 export const socials = [
   { href: "https://github.com/isgb", label: "GitHub", icon: "GH" },
-  { href: "https://www.linkedin.com/in/isa%C3%ADas-salvador-gaona-bracamontes/", label: "LinkedIn", icon: "in" },
+  {
+    href: "https://www.linkedin.com/in/isa%C3%ADas-salvador-gaona-bracamontes/",
+    label: "LinkedIn",
+    icon: "in",
+  },
   { href: "mailto:isgb_codigo@hotmail.com", label: "Email", icon: "✉" },
 ];
 
@@ -45,7 +49,11 @@ export const info = [
     value: "linkedin.com/in/isaías-salvador",
     href: "https://www.linkedin.com/in/isa%C3%ADas-salvador-gaona-bracamontes/",
   },
-  { label: "GitHub", value: "github.com/isgb", href: "https://github.com/isgb" },
+  {
+    label: "GitHub",
+    value: "github.com/isgb",
+    href: "https://github.com/isgb",
+  },
 ];
 
 // Nos permite centralizar la información de los servicios ofrecidos,
