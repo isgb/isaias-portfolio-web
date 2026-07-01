@@ -4,7 +4,7 @@ Portafolio profesional desarrollado para presentar mi experiencia, habilidades t
 
 Sitio de una sola pagina (SPA) con React 19 y Vite, diseño dark con paleta teal/sage, responsive y accesible.
 
-**Demo en vivo:** https://isgb.github.io/isaias-portfolio/
+**Demo en vivo:** https://isgb.github.io/isaias-portfolio-web/
 
 ## Tech Stack
 
