@@ -32,8 +32,8 @@ export const projects = [
     status: "Producción",
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "RBAC", "Bootstrap"],
     demo: "https://sistemadeinventariosfront.vercel.app/",
-    code: "https://github.com/isgb/sistema-inventarios",
-    image: "",
+    code: "https://github.com/isgb/Sistema-de-Inventarios",
+    image: "/isaias-portfolio-web/assets/images/projects/inventarios.png",
   },
   {
     id: 2,
@@ -73,6 +73,6 @@ export const projects = [
     tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Vanilla", "SPA", "localStorage"],
     demo: "https://isgb.github.io/PasteleriaBakeryPuebla/bakeryshop/",
     code: "https://github.com/isgb/PasteleriaBakeryPuebla",
-    image: "",
+    image: "/isaias-portfolio-web/assets/images/projects/bakery.png",
   },
 ];

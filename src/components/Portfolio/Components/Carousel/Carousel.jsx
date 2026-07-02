@@ -44,7 +44,11 @@ function Carousel() {
                   <span className={styles.activeTag}>Proyecto destacado</span>
                 )}
                 <div className={styles.thumb} aria-hidden="true">
-                  <span>{project.title.charAt(0)}</span>
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  ) : (
+                    <span>{project.title.charAt(0)}</span>
+                  )}
                 </div>
                 <div className={styles.body}>
                   <h3>{project.title}</h3>
