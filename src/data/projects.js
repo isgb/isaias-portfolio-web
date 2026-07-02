@@ -1,3 +1,6 @@
+import sistemaventasImg from "../assets/images/projects/sistemaventas.png";
+import pasteleriaImg from "../assets/images/projects/pasteleria.png";
+
 export const projects = [
   {
     id: 1,
@@ -33,7 +36,7 @@ export const projects = [
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "RBAC", "Bootstrap"],
     demo: "https://sistemadeinventariosfront.vercel.app/",
     code: "https://github.com/isgb/Sistema-de-Inventarios",
-    image: "/assets/images/projects/sistemaventas.png",
+    image: sistemaventasImg,
   },
   {
     id: 2,
@@ -73,6 +76,6 @@ export const projects = [
     tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Vanilla", "SPA", "localStorage"],
     demo: "https://isgb.github.io/PasteleriaBakeryPuebla/bakeryshop/",
     code: "https://github.com/isgb/PasteleriaBakeryPuebla",
-    image: "/assets/images/projects/pasteleria.png",
+    image: pasteleriaImg,
   },
 ];
