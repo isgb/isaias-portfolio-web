@@ -33,7 +33,7 @@ export const projects = [
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "RBAC", "Bootstrap"],
     demo: "https://sistemadeinventariosfront.vercel.app/",
     code: "https://github.com/isgb/Sistema-de-Inventarios",
-    image: "/isaias-portfolio-web/assets/images/projects/inventarios.svg",
+    image: "/isaias-portfolio-web/assets/images/projects/inventarios-dashboard.svg",
   },
   {
     id: 2,
