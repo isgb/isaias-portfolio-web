@@ -7,6 +7,7 @@ import {
   SiAngular,
   SiSpring,
 } from "react-icons/si";
+import { MdDataUsage } from "react-icons/md";
 
 // Iconos de marca para las tecnologías mencionadas en la experiencia laboral.
 // React Native reutiliza el icono de React, ya que no existe un icono de marca propio.
@@ -16,6 +17,7 @@ const techIcons = {
   JavaScript: { icon: SiJavascript, color: "#F7DF1E" },
   PHP: { icon: SiPhp, color: "#777BB4" },
   MySQL: { icon: SiMysql, color: "#4479A1" },
+  MSSQL: { icon: MdDataUsage, color: "#CC2927" },
   Angular: { icon: SiAngular, color: "#DD0031" },
   "Java Spring": { icon: SiSpring, color: "#6DB33F" },
 };

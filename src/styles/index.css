@@ -147,6 +147,19 @@ button {
   transform: translateY(-3px);
 }
 
+.btn-secondary {
+  background: rgba(142, 182, 155, 0.15);
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: var(--bg-deep);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(142, 182, 155, 0.35);
+}
+
 ::selection {
   background: var(--accent);
   color: var(--bg-deep);
