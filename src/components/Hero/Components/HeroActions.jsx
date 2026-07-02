@@ -3,7 +3,7 @@ import { HiOutlineArrowDownTray } from 'react-icons/hi2';
 
 function HeroActions() {
   const handleDownloadCV = () => {
-    window.open('/isaias-portfolio-web/cv/CV_Isaias_Gaona.pdf', '_blank');
+    window.open('/cv/CV_Isaias_Gaona.pdf', '_blank');
   };
 
   return (
