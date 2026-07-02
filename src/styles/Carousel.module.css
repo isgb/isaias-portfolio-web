@@ -82,10 +82,6 @@
   color: var(--text-muted);
   font-size: 15px;
   margin-bottom: 18px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .tags {
