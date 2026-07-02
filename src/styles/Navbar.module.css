@@ -83,7 +83,22 @@
 }
 
 .cvLink:hover {
-  color: var(--accent);
+  color: var(--text-main);
+}
+
+.cvLink::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 0.25s ease;
+}
+
+.cvLink:hover::after {
+  width: 100%;
 }
 
 .cvLink:active {
