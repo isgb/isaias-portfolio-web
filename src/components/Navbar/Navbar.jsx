@@ -5,7 +5,6 @@ import { useScrolled } from "../../hooks/useScrolled";
 import NavbarLogo from "./Components/NavbarLogo";
 import NavbarToggle from "./Components/NavbarToggle";
 import NavbarLinks from "./Components/NavbarLinks";
-import NavbarCVButton from "./Components/NavbarCVButton";
 
 /**
  * Componente de barra de navegación que se muestra en la parte superior de la página.
@@ -30,9 +29,6 @@ function Navbar() {
 
         {/* Navegación principal con enlaces a las secciones del sitio, que se muestra de forma horizontal en pantallas grandes y como un menú desplegable en dispositivos móviles. */}
         <NavbarLinks links={links} open={open} onLinkClick={() => setOpen(false)} />
-
-        {/* Botón para descargar CV */}
-        <NavbarCVButton />
 
         {/* Botón de menú para dispositivos móviles, que alterna el estado 'open' para mostrar u ocultar la navegación. */}
         <NavbarToggle open={open} onToggle={() => setOpen((prev) => !prev)} />

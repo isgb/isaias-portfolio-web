@@ -34,6 +34,7 @@ export const links = [
   { href: "#tecnologias", label: "Tecnologías" },
   { href: "#portafolio", label: "Portafolio" },
   { href: "#contacto", label: "Contacto" },
+  { href: "/isaias-portfolio-web/cv/CV_Isaias_Gaona.pdf", label: "Descargar CV", isCV: true },
 ];
 
 // Nos permite centralizar la información de contacto,
