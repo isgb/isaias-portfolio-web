@@ -33,7 +33,7 @@ export const projects = [
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "RBAC", "Bootstrap"],
     demo: "https://sistemadeinventariosfront.vercel.app/",
     code: "https://github.com/isgb/Sistema-de-Inventarios",
-    image: "/isaias-portfolio-web/assets/images/projects/inventarios-dashboard.svg",
+    image: "/isaias-portfolio-web/assets/images/projects/sistemaventas.png",
   },
   {
     id: 2,
@@ -73,6 +73,6 @@ export const projects = [
     tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Vanilla", "SPA", "localStorage"],
     demo: "https://isgb.github.io/PasteleriaBakeryPuebla/bakeryshop/",
     code: "https://github.com/isgb/PasteleriaBakeryPuebla",
-    image: "/isaias-portfolio-web/assets/images/projects/bakery.jpg",
+    image: "/isaias-portfolio-web/assets/images/projects/pasteleria.png",
   },
 ];
