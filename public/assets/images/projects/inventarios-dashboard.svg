@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2332;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f1419;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgGradient)"/>
+
+  <!-- Sidebar -->
+  <rect width="250" height="675" fill="#0f1419" opacity="0.8"/>
+  <rect x="0" y="0" width="250" height="80" fill="#1e3a5f"/>
+
+  <!-- Logo/Brand -->
+  <text x="30" y="50" font-size="24" font-weight="bold" fill="#4a9eff">InvenSys</text>
+
+  <!-- Menu Items -->
+  <circle cx="30" cy="130" r="5" fill="#4a9eff"/>
+  <text x="50" y="135" font-size="14" fill="#4a9eff">Dashboard</text>
+
+  <circle cx="30" cy="170" r="5" fill="#666"/>
+  <text x="50" y="175" font-size="14" fill="#999">Productos</text>
+
+  <circle cx="30" cy="210" r="5" fill="#666"/>
+  <text x="50" y="215" font-size="14" fill="#999">Categorías</text>
+
+  <circle cx="30" cy="250" r="5" fill="#666"/>
+  <text x="50" y="255" font-size="14" fill="#999">Movimientos</text>
+
+  <circle cx="30" cy="290" r="5" fill="#666"/>
+  <text x="50" y="295" font-size="14" fill="#999">Usuarios</text>
+
+  <!-- Header -->
+  <rect x="250" y="0" width="950" height="70" fill="#1a2332" opacity="0.6"/>
+  <text x="270" y="45" font-size="20" font-weight="bold" fill="#fff">Dashboard</text>
+  <circle cx="1150" cy="35" r="20" fill="#4a9eff" opacity="0.3"/>
+
+  <!-- Metric Cards -->
+  <!-- Card 1 -->
+  <rect x="270" y="100" width="200" height="120" rx="8" fill="#1a3a52" stroke="#4a9eff" stroke-width="1" opacity="0.7"/>
+  <text x="290" y="130" font-size="12" fill="#999">TOTAL PRODUCTOS</text>
+  <text x="290" y="160" font-size="36" font-weight="bold" fill="#4a9eff">128</text>
+
+  <!-- Card 2 -->
+  <rect x="490" y="100" width="200" height="120" rx="8" fill="#1a523a" stroke="#2da84a" stroke-width="1" opacity="0.7"/>
+  <text x="510" y="130" font-size="12" fill="#999">STOCK DISPONIBLE</text>
+  <text x="510" y="160" font-size="36" font-weight="bold" fill="#2da84a">1,245</text>
+
+  <!-- Card 3 -->
+  <rect x="710" y="100" width="200" height="120" rx="8" fill="#523a1a" stroke="#ffb700" stroke-width="1" opacity="0.7"/>
+  <text x="730" y="130" font-size="12" fill="#999">VALOR INVENTARIO</text>
+  <text x="730" y="160" font-size="28" font-weight="bold" fill="#ffb700">$506K</text>
+
+  <!-- Card 4 -->
+  <rect x="930" y="100" width="210" height="120" rx="8" fill="#521a1a" stroke="#ff4a4a" stroke-width="1" opacity="0.7"/>
+  <text x="950" y="130" font-size="12" fill="#999">BAJO STOCK</text>
+  <text x="950" y="160" font-size="36" font-weight="bold" fill="#ff4a4a">7</text>
+
+  <!-- Chart Area -->
+  <rect x="270" y="250" width="870" height="350" rx="8" fill="#0f1419" stroke="#333" stroke-width="1" opacity="0.4"/>
+
+  <!-- Chart Title -->
+  <text x="290" y="280" font-size="16" font-weight="bold" fill="#fff">Movimientos Recientes</text>
+
+  <!-- Chart Bars -->
+  <rect x="320" y="350" width="40" height="120" fill="#4a9eff" opacity="0.7" rx="4"/>
+  <text x="330" y="495" font-size="12" fill="#999">Lun</text>
+
+  <rect x="390" y="320" width="40" height="150" fill="#4a9eff" opacity="0.7" rx="4"/>
+  <text x="400" y="495" font-size="12" fill="#999">Mar</text>
+
+  <rect x="460" y="280" width="40" height="190" fill="#4a9eff" opacity="0.7" rx="4"/>
+  <text x="470" y="495" font-size="12" fill="#999">Mié</text>
+
+  <rect x="530" y="310" width="40" height="160" fill="#2da84a" opacity="0.7" rx="4"/>
+  <text x="540" y="495" font-size="12" fill="#999">Jue</text>
+
+  <rect x="600" y="290" width="40" height="180" fill="#4a9eff" opacity="0.7" rx="4"/>
+  <text x="610" y="495" font-size="12" fill="#999">Vie</text>
+
+  <rect x="670" y="340" width="40" height="130" fill="#4a9eff" opacity="0.7" rx="4"/>
+  <text x="680" y="495" font-size="12" fill="#999">Sab</text>
+
+  <!-- Legend -->
+  <circle cx="800" cy="320" r="6" fill="#4a9eff"/>
+  <text x="820" y="325" font-size="13" fill="#999">Entradas</text>
+
+  <circle cx="800" cy="350" r="6" fill="#2da84a"/>
+  <text x="820" y="355" font-size="13" fill="#999">Salidas</text>
+</svg>
