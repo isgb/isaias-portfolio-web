@@ -10,15 +10,15 @@ export const experience = [
     summary:
       "Desarrollo de aplicaciones web y móviles para digitalizar y centralizar procesos empresariales, liderando un equipo de desarrollo y optimizando flujos operativos.",
     highlights: [
+      "Desarrollé e implementé un sistema de mensajería interna tipo WhatsApp para una oficina de seguros, integrando la API oficial de Meta (WhatsApp Business Platform) para el envío y recepción de mensajes en tiempo real y la gestión de conversaciones mediante webhooks.",
+      "Desarrollé la integración de WhatsApp Business API (Meta) para una pizzería, implementando un bot conversacional para atención automática, el flujo completo de toma de pedidos desde WhatsApp y la integración de pagos mediante Stripe.",
       "Desarrollé aplicaciones web con React JS para digitalizar y centralizar procesos empresariales utilizados por áreas operativas y administrativas.",
       "Diseñé e implementé una plataforma de encuestas con React JS basada en NOM-035 para aproximadamente 50 usuarios, facilitando la recopilación y análisis de información relacionada con el bienestar laboral.",
-      "Desarrollé aplicaciones móviles con React Native para registro de visitas, captura de evidencia y gestión de información en campo.",
-      "Integré funcionalidades de geolocalización, escaneo QR, carga masiva desde Excel, captura de imágenes y generación automática de reportes en aplicaciones móviles desarrolladas con React Native.",
-      "Diseñé e implementé procesos de carga masiva capaces de procesar cientos de registros por operación, reduciendo significativamente los tiempos de captura manual.",
-      "Optimicé y automaticé procesos de captura y procesamiento de información en aplicaciones web y móviles desarrolladas con React JS y React Native, generando ahorros de entre 1 y 2 horas de trabajo operativo y análisis por proceso.",
+      "Desarrollé aplicaciones móviles con React Native para registro de visitas, captura de evidencia y gestión de información en campo, integrando geolocalización, escaneo QR, carga masiva desde Excel y generación automática de reportes.",
+      "Diseñé procesos de carga masiva capaces de procesar cientos de registros por operación, reduciendo significativamente los tiempos de captura manual y generando ahorros de entre 1 y 2 horas de trabajo operativo por proceso.",
       "Diseñé e implementé pruebas funcionales y de integración para mejorar la estabilidad, calidad y confiabilidad de las aplicaciones.",
-      "Participé en el mantenimiento, optimización y desarrollo de módulos bajo arquitectura MVC utilizando JavaScript, PHP y MySQL.",
-      "Lideré un equipo de desarrollo mediante asignación de tareas, revisión de código, gestión de prioridades y seguimiento de entregables para garantizar el cumplimiento de los objetivos del proyecto.",
+      "Mantuve y desarrollé módulos bajo arquitectura MVC con JavaScript, PHP y MySQL — patrón de diseño base de frameworks como Laravel.",
+      "Lideré un equipo de desarrollo gestionando tareas, revisión de código (Pull Requests) y seguimiento de entregables.",
     ],
     technologies: ["React", "React Native", "JavaScript", "PHP", "MySQL"],
   },
@@ -30,10 +30,9 @@ export const experience = [
     summary:
       "Mantenimiento y optimización de aplicaciones empresariales para el proyecto CITI Banamex, con foco en rendimiento de base de datos y resolución de incidencias.",
     highlights: [
-      "Realicé mantenimiento y corrección de aplicaciones web utilizando JavaScript, Angular y Java Spring.",
-      "Optimicé procedimientos almacenados en MSSQL, mejorando rendimiento y tiempos de respuesta en consultas.",
-      "Participé en análisis, mantenimiento y resolución de incidencias en sistemas empresariales.",
-      "Colaboré en mejoras continuas para garantizar estabilidad y funcionamiento de aplicaciones.",
+      "Diseñé y optimicé procedimientos almacenados en SQL Server (MSSQL), mejorando el rendimiento y los tiempos de respuesta en consultas sobre sistemas empresariales de alto volumen.",
+      "Realicé mantenimiento y corrección de aplicaciones web con JavaScript, Angular y Java Spring.",
+      "Participé en análisis y resolución de incidencias en sistemas empresariales, colaborando en mejoras continuas de estabilidad.",
     ],
     technologies: ["JavaScript", "Angular", "Java Spring", "MSSQL"],
   },
@@ -45,8 +44,8 @@ export const experience = [
     summary:
       "Desarrollo de herramientas internas de control y automatización de procesos en CRM y Vicidial, con énfasis en seguridad y generación de reportes.",
     highlights: [
-      "Desarrollé una aplicación de control de empleados utilizando JavaScript, PHP y MySQL.",
-      "Automaticé procesos internos en CRM y Vicidial, disminuyendo tareas repetitivas.",
+      "Desarrollé una aplicación de control de empleados con JavaScript, PHP y MySQL bajo arquitectura MVC.",
+      "Automaticé procesos internos en CRM y Vicidial, reduciendo tareas repetitivas y optimizando procesos operativos.",
       "Implementé carga masiva de información y generación automática de reportes.",
       "Implementé cifrado de contraseñas para fortalecer la seguridad del sistema.",
     ],
