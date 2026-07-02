@@ -10,7 +10,7 @@ import styles from "../../../../styles/Contact.module.css";
  * @param {boolean} props.sent - Indicador de si el mensaje ha sido enviado exitosamente.
  * @returns  {JSX.Element} El componente de formulario de contacto.
  */
-export const Form = ({ form, handleChange, handleSubmit, sent }) => {
+export const Form = ({ form, handleChange, handleSubmit, sent, loading, error }) => {
   return (
     <div>
       <form className={`glass-card ${styles.form}`} onSubmit={handleSubmit}>
@@ -23,6 +23,7 @@ export const Form = ({ form, handleChange, handleSubmit, sent }) => {
             value={form.name}
             onChange={handleChange}
             required
+            disabled={loading}
           />
         </div>
         <div className={styles.field}>
@@ -34,6 +35,7 @@ export const Form = ({ form, handleChange, handleSubmit, sent }) => {
             value={form.email}
             onChange={handleChange}
             required
+            disabled={loading}
           />
         </div>
         <div className={styles.field}>
@@ -45,14 +47,20 @@ export const Form = ({ form, handleChange, handleSubmit, sent }) => {
             value={form.message}
             onChange={handleChange}
             required
+            disabled={loading}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          Enviar Mensaje
+        <button type="submit" className="btn btn-primary" disabled={loading}>
+          {loading ? "Enviando..." : "Enviar Mensaje"}
         </button>
         {sent && (
           <p className={styles.success}>
             ¡Gracias! Tu mensaje ha sido enviado.
+          </p>
+        )}
+        {error && (
+          <p style={{ color: "#ff4a4a", marginTop: "10px" }}>
+            {error}
           </p>
         )}
       </form>
