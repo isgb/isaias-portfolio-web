@@ -55,12 +55,16 @@ function Carousel() {
                     ))}
                   </div>
                   <div className={styles.cardLinks}>
-                    <a href={project.demo} target="_blank" rel="noreferrer">
-                      Ver Demo →
-                    </a>
-                    <a href={project.code} target="_blank" rel="noreferrer">
-                      Código →
-                    </a>
+                    {project.demo && (
+                      <a href={project.demo} target="_blank" rel="noreferrer">
+                        Ver Demo →
+                      </a>
+                    )}
+                    {project.code && (
+                      <a href={project.code} target="_blank" rel="noreferrer">
+                        Código →
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
