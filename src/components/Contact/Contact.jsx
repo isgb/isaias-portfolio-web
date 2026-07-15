@@ -16,7 +16,7 @@ import { useContactForm } from "../../hooks/useContactForm";
 function Contact() {
   // Utiliza el hook personalizado useContactForm para manejar el estado del formulario,
   // el envío y los cambios en los campos del formulario.
-  const { form, sent, loading, error, handleChange, handleSubmit } = useContactForm();
+  const { form, sent, handleChange, handleSubmit } = useContactForm();
 
   return (
     <section id="contacto" className="section">
@@ -36,8 +36,6 @@ function Contact() {
             handleChange={handleChange}
             handleSubmit={handleSubmit}
             sent={sent}
-            loading={loading}
-            error={error}
           />
         </div>
       </div>
