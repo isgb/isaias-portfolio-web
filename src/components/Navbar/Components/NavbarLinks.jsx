@@ -4,7 +4,7 @@ import styles from "../../../styles/Navbar.module.css";
 function NavbarLinks({ links, open, onLinkClick }) {
   const handleCVClick = (e) => {
     e.preventDefault();
-    window.open('/cv/CV_Isaias_Gaona.pdf', '_blank');
+    window.open('/isaias-portfolio-web/cv/CV_Isaias_Gaona.pdf', '_blank');
     onLinkClick();
   };
 
